@@ -101,7 +101,7 @@ if __name__ == '__main__':
     data_start = datetime.strptime(data_start, '%Y-%m-%d').date()
     sample_start = datetime.strptime(sample_start, '%Y-%m-%d').date()
     sample_end = datetime.strptime(sample_end, '%Y-%m-%d').date()
-    data = np.loadtxt('data.sql', dtype='float', delimiter=',', skiprows=1, encoding='utf-8')
+    data = np.loadtxt('data.sql', dtype='float', delimiter=',', skiprows=0)
     data_end = data_end = data_start + timedelta(data.size-1)
     if not predict_start:
         predict_start = sample_end + timedelta(1)
